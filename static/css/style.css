@@ -1,0 +1,113 @@
+
+        .title {
+            margin: 5px;
+        }
+
+        .content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border:1px solid grey ;
+        }
+
+        .student {
+            flex: 20%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3;
+            inline-size: 100%;
+        }
+
+        .bio {
+            padding: 10px;
+            margin: 5px;
+            background-color: #ffffff;
+            color: #004835;
+        }
+
+        .name a {
+            color: #00a36f;
+            text-decoration: none;
+        }
+
+        /* nav a {
+            color: green;
+            font-size: 3em;
+            margin-left: 50px;
+            text-decoration: none;
+        } */
+        
+        .navbar{
+            width: 1200px;
+            height:100px;
+            margin:auto ;
+         
+            position: sticky;
+            top: 0;
+            border:0px 1px 1px 1px  solid #004835;
+
+        }
+        .icon{
+            width: 500px;
+            /* height: 80px; */
+            float: left;
+            
+        }
+        
+        .logo {
+            color: ;
+            /* padding-left: 20px; */
+            padding-top: 0;
+            float: left;
+            font-size: 30px;
+            padding: 0;
+            margin-top: -10px; 
+            
+        
+        }
+        
+        span{
+            color: brown;
+        }
+        
+        .menu{
+        width: 400px;
+        height: 70px;
+        float: left;
+        }
+        
+        ul{
+            float: left;
+            display: flex;
+            /* justify-content:center; */
+            align-items: center;
+        }
+        
+        ul li{
+            list-style: none;
+            margin-left: 67px;
+            margin-top:45px ;
+            text-decoration: none;
+        }
+
+        ul li a{
+            list-style: none;
+            /* margin-left: 67px; */
+            margin-top:45px ;
+            text-decoration: none;
+            font-size: 35px;
+            margin-bottom: 10px;
+            color:black;
+        }
+
+        .form {
+            margin-left: 20px;
+
+           
+        }
+
+        .indent{
+            margin-left: 20px;
+        }

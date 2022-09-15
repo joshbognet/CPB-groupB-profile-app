@@ -1,0 +1,26 @@
+{%extends "base.html"%}
+
+{%block content%}   
+<h1 class="title"> Students </h1>
+    <div class="content">
+        {%for student in s%}
+            <div class="student">
+                <p><b>No:{{ student.id }}</b></p>
+                <b>
+                    <p class="name">
+                        <a href="">
+                         {{ student.firstname }} {{ student.lastname }}
+                        </a>
+                    </p>
+                </b>
+                <p><b>Email:</b> {{ student.email }} </p>
+                <p><b>Age:</b>{{ student.age }}  years old.</p>
+                <p>Joined:{{ student.created_at }} </p>
+                <div class="bio">
+                    <h4>Bio</h4>
+                    <p>{{ student.bio }}  </p>
+                </div>
+            </div>
+        {%endfor%}
+    </div> 
+{%endblock%}
