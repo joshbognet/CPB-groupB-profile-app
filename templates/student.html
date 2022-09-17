@@ -1,18 +1,17 @@
 {%extends "base.html"%}
 
-{%block content%}   
-<h1 class="title"> Students </h1>
+{%block content%}  
+
+<h1 class="title"> <b>
+    <p class="name">
+        <a href="">
+         {{ student.firstname }} {{ student.lastname }}
+        </a>
+    </p>
+</b> </h1>
     <div class="content">
-        {%for student in students%}
             <div class="student">
                 <p><b>No:{{ student.id }}</b></p>
-                <b>
-                    <p class="name">
-                        <a href="">
-                         {{ student.firstname }} {{ student.lastname }}
-                        </a>
-                    </p>
-                </b>
                 <p><b>Email:</b> {{ student.email }} </p>
                 <p><b>Age:</b>{{ student.age }}  years old.</p>
                 <p>Joined:{{ student.created_at }} </p>
@@ -26,17 +25,15 @@
 
                 <hr>
 
-                
-
                 <div>
                     <form method="POST"
                 action="{{ url_for('Delete', student_id=student.id) }}">
             <input type="submit" value="Delete Student"
-                onclick="return confirm('Do you want to delete this information?')">
+                onclick="return confirm('Do you want to delete this entry?')">
         </form>
                 </div>
 
             </div>
-        {%endfor%}
+
     </div> 
 {%endblock%}
