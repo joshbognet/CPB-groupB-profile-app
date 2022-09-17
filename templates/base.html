@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% block head %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>{%block title%} {% endblock %} Code Pla2 Grp B Database</title>
+    <title>{%block title%}  {%endblock%}</title>
+    <link rel="icon" href="{{url_for('static', filename='img/logo.svg')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    {% endblock%}
 </head>
 <body>
-    <div class="navbar">
-        <div class="icon">
-            <div class="logo">
-                <h1>CPB <span>GpB</span></h1>
-            </div>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="{{  url_for('Home')}}">HOME</a></li>
-                <li><a href="{{  url_for('Create')}}">CREATE</a></li>
-                <li><a href="">ABOUT</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            {%block content%}
-            {% endblock%}
-        </div>
+<header>
+    <nav>    
+        <ul>
+            <li><a href="{{url_for('index')}}">Home</a></li>
+            <li><a href="{{url_for('create')}}">Create</a></li>
+            <li><a href="{{url_for('about')}}">About</a></li>
+        </ul>
+    </nav>
+</header><br>
+
+<div class="template_content">
+
+    {%block content%}  {%endblock%}
+
+</div>
 </body>
 </html>

@@ -1,46 +1,49 @@
-{%extends "base.html"%}
-{%block content%}
-<h1 class="indent" style="width: 100%">Add a New Student </h1>
-    <form class="form" method="post" action="">
-        <p>
-            <label for="firstname">First Name</label>
-            <input type="text" name="firstname"
-                   placeholder="First name">
-            </input>
-        </p>
+{%extends 'base.html'%}
 
-        <p>
-            <label for="lastname">Last Name</label>
-            <input type="text" name="lastname"
-                   placeholder="Last name">
-            </input>
-        </p>
+{%block title%} Add a new student {%endblock%}
 
-        <p>
-            <label for="email">Email</label>
-            <input type="email" name="email"
-                   placeholder="Student email">
-            </input>
-        </p>
+{% block content%}
 
-        <p>
-            <label for="age">Age</label>
-            <input type="number" name="age"
-                   placeholder="Age">
-            </input>
-        </p>
+    <div class="container">
 
-        <p>
-        <label for="bio">Bio</label>
-        <br>
-        <textarea name="bio"
-                  placeholder="Bio"
-                  rows="15"
-                  cols="60"
-                  ></textarea>
-        </p>
-        <p>
-            <button type="submit">Submit</button>
-        </p>
-    </form>
-{%endblock%}    
+        <h1>Add a new student</h1>
+
+        <form method="POST">
+            
+
+            <p>
+                <label for="firstname">Firstname</label><br>
+                <input type="text", name="firstname",placeholder="first name"> 
+                </input>
+            </p>
+    
+            
+            <p>
+                <label for="lastname">LastName</label><br>
+                <input type="text", name="lastname",placeholder="last name">
+                </input> 
+            </p>
+            <p>
+                <label for="email">Email</label><br>
+                <input type="email", name="email",placeholder="student email">
+                </input> 
+            </p>
+            <p>
+                <label for="age">Age</label><br>
+                <input type="text", name="age",placeholder="Age"> 
+                </input> 
+            </p>
+            <p>
+                <label for="bio">Bio</label><br>
+                <textarea name="bio"
+                placeholder="bio"
+                rows="15"
+                cols="60"
+                > </textarea>
+            </p>
+            <p>
+                <button type="submit">submit</button>
+            </p>
+        </form>
+    </div>
+{%endblock%}
