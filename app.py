@@ -89,15 +89,3 @@ def Delete(student_id):
     db.session.delete(student)
     db.session.commit()
     return redirect(url_for('Home'))
-
-
-
-        
-        
-
-
-
-
-
-
-
