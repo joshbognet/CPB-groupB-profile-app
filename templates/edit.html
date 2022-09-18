@@ -1,10 +1,17 @@
-{%extends "base.html"%}
-{%block content%}
-<h1 class="indent" style="width: 100%">Add a New Student </h1>
-    <form class="form" method="post" action="">
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="indent" style="width: 100%">
+        {% block title %} Edit {{ student.firstname }}
+                               {{ student.lastname }}'s Details
+        {% endblock %}
+    </h1>
+    <!-- The value attribute of each input field and the value of the bio text area are set to the corresponding value in the student object you passed from the edit() view function to the edit.html template. -->
+    <form class="form" method="post">
         <p>
             <label for="firstname">First Name</label>
             <input type="text" name="firstname"
+                   value={{ student.firstname }}
                    placeholder="First name">
             </input>
         </p>
@@ -12,6 +19,7 @@
         <p>
             <label for="lastname">Last Name</label>
             <input type="text" name="lastname"
+                   value={{ student.lastname }}
                    placeholder="Last name">
             </input>
         </p>
@@ -19,6 +27,7 @@
         <p>
             <label for="email">Email</label>
             <input type="email" name="email"
+                   value={{ student.email }}
                    placeholder="Student email">
             </input>
         </p>
@@ -26,6 +35,7 @@
         <p>
             <label for="age">Age</label>
             <input type="number" name="age"
+                   value={{ student.age }}
                    placeholder="Age">
             </input>
         </p>
@@ -37,10 +47,10 @@
                   placeholder="Bio"
                   rows="15"
                   cols="60"
-                  ></textarea>
+                  >{{ student.bio }}</textarea>
         </p>
         <p>
-            <button class="btn" type="submit">Submit</button>
+            <button type="submit">Submit</button>
         </p>
     </form>
-{%endblock%}    
+{% endblock %}
