@@ -32,3 +32,22 @@ header li a {
 .template_content{
 padding-top: 5em;
 }
+.login{
+    float: right;
+    text-decoration: none;
+    border-left: 20 em;
+    display: flex; 
+    padding-left: 3em;
+}
+a{
+    text-align: right;
+    text-decoration: none;
+    display: inline;
+   
+}
+.login a{
+    margin: 20px;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+}

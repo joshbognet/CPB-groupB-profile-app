@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+
+{%block title%} home {%endblock%}
+
+{% block content%}
+<div class="container">
+    <h1> Sign in </h1>
+    <form action="" methods="POST,GET"> <p>
+        <label for="firstname">Firstname</label><br>
+        <input type="text", name="firstname",placeholder="first name"> 
+        </input>
+    </p>
+
+    
+    <p>
+        <label for="lastname">LastName</label><br>
+        <input type="text", name="lastname",placeholder="last name">
+        </input> 
+    </p>
+    <p>
+        <label for="email">Email</label><br>
+        <input type="email", name="email",placeholder="student email">
+        </input> 
+    </p>
+    <p>
+        <label for="age">Age</label><br>
+        <input type="text", name="age",placeholder="Age"> 
+        </input> 
+    </p>
+    <p>
+        <label for="bio">Bio</label><br>
+        <textarea name="bio"
+        placeholder="bio"
+        rows="15"
+        cols="60"
+        > </textarea>
+    </p>
+    <p>
+        <button type="submit">submit</button>
+    </p>
+
+        
+    </form> 
+</div>
+{%endblock%}clear

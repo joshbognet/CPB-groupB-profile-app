@@ -18,9 +18,13 @@
             <li><a href="{{url_for('create')}}">Create</a></li>
             <li><a href="{{url_for('about')}}">About</a></li>
         </ul>
+        <div class="login">
+            <a href="{{url_for('log_in')}}">login</a><br>
+            <a href="{{url_for('sign_in')}}">sign in</a>
+        </div>
     </nav>
 </header><br>
-
+    
 <div class="template_content">
 
     {%block content%}  {%endblock%}

@@ -91,6 +91,13 @@ def delete (student_id):
 def about():
     return render_template('about.html')
 
+@app.route('/sign_in')
+def sign_in():
+    return render_template('sign_in.html')
+
+@app.route('/log_in')
+def log_in():
+    return render_template('log_in.html')
 
 if __name__ =='__main__':
     app.run(debug=True)
